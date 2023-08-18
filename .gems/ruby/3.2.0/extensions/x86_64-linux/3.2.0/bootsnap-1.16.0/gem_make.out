@@ -1,0 +1,18 @@
+current directory: /home/hp/Desktop/railsmodeldemo/.gems/ruby/3.2.0/gems/bootsnap-1.16.0/ext/bootsnap
+/usr/share/rvm/rubies/ruby-3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/hp/Desktop/railsmodeldemo/.gems/ruby/3.2.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230818-5820-qxyyoh sitelibdir\=./.gem.20230818-5820-qxyyoh clean
+
+current directory: /home/hp/Desktop/railsmodeldemo/.gems/ruby/3.2.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230818-5820-qxyyoh sitelibdir\=./.gem.20230818-5820-qxyyoh
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/hp/Desktop/railsmodeldemo/.gems/ruby/3.2.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230818-5820-qxyyoh sitelibdir\=./.gem.20230818-5820-qxyyoh install
+/usr/bin/install -m 0755 bootsnap.so ./.gem.20230818-5820-qxyyoh/bootsnap
+
+current directory: /home/hp/Desktop/railsmodeldemo/.gems/ruby/3.2.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230818-5820-qxyyoh sitelibdir\=./.gem.20230818-5820-qxyyoh clean

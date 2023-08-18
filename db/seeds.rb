@@ -84,45 +84,45 @@
 # )
 
 
-# Book.create(
-#   bookname: "You Can Win",
-#   author: "Shiv Khera",
-#   price: 19.99,
-#   quantity: 20,
-#   admin_id: 1 # Assuming admin with ID 1
-# )
+Book.create(
+  bookname: "You Can Win",
+  author: "Shiv Khera",
+  price: 19,
+  quantity: 20,
+  admin_id: 1 # Assuming admin with ID 1
+)
 
-# Book.create(
-#   bookname: "Wings of Fire",
-#   author: "A.P.J. Abdul Kalam",
-#   price: 24.99,
-#   quantity: 15,
-#   admin_id: 1
-# )
+Book.create(
+  bookname: "Wings of Fire",
+  author: "A.P.J. Abdul Kalam",
+  price: 24.99,
+  quantity: 15,
+  admin_id: 1
+)
 
-# Book.create(
-#   bookname: "The Power of Subconscious Mind",
-#   author: "Joseph Murphy",
-#   price: 14.99,
-#   quantity: 30,
-#   admin_id: 1
-# )
+Book.create(
+  bookname: "The Power of Subconscious Mind",
+  author: "Joseph Murphy",
+  price: 14,
+  quantity: 30,
+  admin_id: 1
+)
 
-# Book.create(
-#   bookname: "Physics (RD Sharma)",
-#   author: "R.D. Sharma",
-#   price: 29.99,
-#   quantity: 25,
-#   admin_id: 1
-# )
+Book.create(
+  bookname: "Physics (RD Sharma)",
+  author: "R.D. Sharma",
+  price: 29,
+  quantity: 25,
+  admin_id: 1
+)
 
-# Book.create(
-#   bookname: "Atal Bihari Book",
-#   author: "Atal Bihari Vajpayee",
-#   price: 9.99,
-#   quantity: 10,
-#   admin_id: 1
-# )
+Book.create(
+  bookname: "Atal Bihari Book",
+  author: "Atal Bihari Vajpayee",
+  price: 9,
+  quantity: 10,
+  admin_id: 1
+)
 
 
 # user_ids = [1, 2, 3, 4, 5, 6] # Adjust these IDs based on your actual users

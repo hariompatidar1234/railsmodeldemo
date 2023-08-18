@@ -30,15 +30,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_17_152819) do
     t.index ["admin_id"], name: "index_books_on_admin_id"
   end
 
-  create_table "order_items", force: :cascade do |t|
-    t.integer "order_id", null: false
-    t.integer "book_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["book_id"], name: "index_order_items_on_book_id"
-    t.index ["order_id"], name: "index_order_items_on_order_id"
-  end
-
   create_table "orders", force: :cascade do |t|
     t.integer "quantity"
     t.integer "user_id", null: false
@@ -54,8 +45,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_17_152819) do
     t.string "comment"
     t.integer "user_id", null: false
     t.integer "order_id", null: false
+    t.integer "book_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["book_id"], name: "index_ratings_on_book_id"
     t.index ["order_id"], name: "index_ratings_on_order_id"
     t.index ["user_id"], name: "index_ratings_on_user_id"
   end
@@ -70,10 +63,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_17_152819) do
   end
 
   add_foreign_key "books", "admins"
-  add_foreign_key "order_items", "books"
-  add_foreign_key "order_items", "orders"
   add_foreign_key "orders", "books"
   add_foreign_key "orders", "users"
+  add_foreign_key "ratings", "books"
   add_foreign_key "ratings", "orders"
   add_foreign_key "ratings", "users"
 end

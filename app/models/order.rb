@@ -2,8 +2,6 @@ class Order < ApplicationRecord
   belongs_to :user
   belongs_to :book
   has_one :rating, dependent: :destroy
-  has_many :order_items, dependent: :destroy
-  has_many :books, through: :order_items
   validates :quantity, numericality: { only_integer: true }
   after_save :update_book_quantity
 
