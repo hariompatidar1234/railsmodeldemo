@@ -4,7 +4,7 @@ class Book < ApplicationRecord
   has_many :ratings, dependent: :destroy
 
   validates :author, :price, :quantity, presence: true
-  validates :quantity, numericality: { only_integer: true }
+  validates :quantity, numericality: { only_integer: true, greater_than_or_equal_to: 0}
   validates :bookname , presence: true , uniqueness: {case_sensitive: false}
   validates :price, numericality: {only_integer: true, greater_than_or_equal_to: 0}
 

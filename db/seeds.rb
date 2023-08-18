@@ -9,9 +9,9 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
-
 =begin
 
+admin=Admin.create(first_name:"hariom",last_name:"patidar",gmail:"hariom@123gmail.com")
 User.create(
   first_name: "Aryan",
   last_name: "Singh",
@@ -68,92 +68,99 @@ User.create(
   address: "Lucknow"
 )
 
-=end
 
 
 
-# Book.create(
-#   bookname: "You Can Win",
-#   author: "Shiv Khera",
-#   price: 19,
-#   quantity: 20,
-#   admin_id: 1 # Assuming admin with ID 1
-# )
+Book.create(
+  bookname: "You Can Win",
+  author: "Shiv Khera",
+  price: 19,
+  quantity: 20,
+  admin_id: 1 # Assuming admin with ID 1
+)
 
-# Book.create(
-#   bookname: "Wings of Fire",
-#   author: "A.P.J. Abdul Kalam",
-#   price: 24,
-#   quantity: 15,
-#   admin_id: 1
-# )
+Book.create(
+  bookname: "Wings of Fire",
+  author: "A.P.J. Abdul Kalam",
+  price: 24,
+  quantity: 15,
+  admin_id: 1
+)
 
-# Book.create(
-#   bookname: "The Power of Subconscious Mind",
-#   author: "Joseph Murphy",
-#   price: 14,
-#   quantity: 30,
-#   admin_id: 1
-# )
+Book.create(
+  bookname: "The Power of Subconscious Mind",
+  author: "Joseph Murphy",
+  price: 14,
+  quantity: 30,
+  admin_id: 1
+)
 
-# Book.create(
-#   bookname: "Physics (RD Sharma)",
-#   author: "R.D. Sharma",
-#   price: 29,
-#   quantity: 25,
-#   admin_id: 1
-# )
+Book.create(
+  bookname: "Physics (RD Sharma)",
+  author: "R.D. Sharma",
+  price: 29,
+  quantity: 25,
+  admin_id: 1
+)
 
-# Book.create(
-#   bookname: "Atal Bihari Book",
-#   author: "Atal Bihari Vajpayee",
-#   price: 9,
-#   quantity: 10,
-#   admin_id: 1
-# )
-
-
-
-
-
-# user_ids = [1, 2, 3, 4, 5, 6] 
-# book_ids = [1, 2, 3, 4, 5]    
-#order_ids=[1,2,3,4,5]
-# user_ids.each do |user_id|
-#   book_ids.each do |book_id|
-#     quantity = rand(1..5) 
-#   end
-# end
-
-
-
-# all_orders = Order.joins(:user, :book)
-
-# all_orders.each do |order|
-#   puts "Order ID: #{order.id}"
-#   puts "User: #{order.user.first_name} #{order.user.last_name}"
-#   puts "Book: #{order.book.bookname} by #{order.book.author}"
-#   puts "Quantity: #{order.quantity}"
-#   puts ""
-# end
+Book.create(
+  bookname: "Atal Bihari Book",
+  author: "Atal Bihari Vajpayee",
+  price: 9,
+  quantity: 10,
+  admin_id: 1
+)
 
 
 
 
-=begin
+user_ids = [1, 2, 3] 
+book_ids = [1, 2, 3]    
+user_ids.each do |user_id|
+  book_ids.each do |book_id|
+  	quantity = rand(1..10) 
+    Order.create(
+      quantity: quantity,
+      user_id: user_id,
+      book_id: book_id
+    )
+  end
+end
 
-# user_ids = [1, 2, 3, 4, 5, 6] 
-# book_ids = [1, 2, 3, 4, 5]    
 
-# user_ids.each do |user_id|
-#   book_ids.each do |book_id|
-#     Order.create(
-#       quantity: quantity,
-#       user_id: user_id,
-#       book_id: book_id
-#     )
-#   end
-# end
+
+user_ids = [1, 2, 3] 
+book_ids = [1, 2, 3]    
+order_ids=[1,2,3,3,4]
+comment_arr=["good","avarage","exelent"]
+user_ids.each do |user_id|
+  book_ids.each do |book_id|
+  	order_ids.each do |order_ids|
+    quantity = rand(1..5)   
+    comment=comment_arr(rand(comment_arr.length))
+    rate=rand(1..5)
+    Rating.create(
+    rate:rate
+    comment: comment
+    user_id:user_id
+    order_id:order_id
+    book_id: book_id 
+    )
+  
+  end
+end
+
+
+all_orders = Order.joins(:user, :book)
+all_orders.each do |order|
+  puts "Order ID: #{order.id}"
+  puts "User: #{order.user.first_name} #{order.user.last_name}"
+  puts "Book: #{order.book.bookname} by #{order.book.author}"
+  puts "Quantity: #{order.quantity}"
+  puts ""
+end
 
 
 =end 
+
+ 
