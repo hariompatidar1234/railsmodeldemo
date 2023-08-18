@@ -11,8 +11,8 @@ class User < ApplicationRecord
   private
 
   def normalize_name
-    self.first_name = first_name.strip.downcase
-    self.last_name = last_name.strip.downcase
+    self.first_name = self.first_name.strip.downcase
+    self.last_name = self.last_name.strip.downcase
   end
 
   def unique_name

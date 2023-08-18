@@ -3,7 +3,7 @@ class CreateBooks < ActiveRecord::Migration[7.0]
     create_table :books do |t|
       t.string :bookname
       t.string :author
-      t.decimal :price
+      t.integer :price
       t.integer :quantity
       t.references :admin, null: false, foreign_key: true
 

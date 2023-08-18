@@ -22,7 +22,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_17_152819) do
   create_table "books", force: :cascade do |t|
     t.string "bookname"
     t.string "author"
-    t.decimal "price"
+    t.integer "price"
     t.integer "quantity"
     t.integer "admin_id", null: false
     t.datetime "created_at", null: false
