@@ -1,6 +1,6 @@
 class Book < ApplicationRecord
   belongs_to :admin
-  has_many :orders
+  has_many :orders,dependent: :destroy
   has_many :ratings, dependent: :destroy
 
   validates :author, :price, :quantity, presence: true

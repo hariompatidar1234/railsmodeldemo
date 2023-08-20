@@ -13,6 +13,8 @@ class User < ApplicationRecord
   def normalize_name
     self.first_name = self.first_name.strip.downcase
     self.last_name = self.last_name.strip.downcase
+    self.address = self.address.strip.downcase
+
   end
 
   def unique_name
@@ -20,4 +22,5 @@ class User < ApplicationRecord
       errors.add(:base, "First name and last name cannot be the same")
     end
   end
+  
 end
