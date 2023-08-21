@@ -17,7 +17,6 @@ class Book < ApplicationRecord
   def unique_title
   	self.author=self.author.downcase.strip
   	self.bookname=self.bookname.downcase.strip
-    
   end
 end
 

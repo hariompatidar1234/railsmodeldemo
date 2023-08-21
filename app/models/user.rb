@@ -3,7 +3,7 @@ class User < ApplicationRecord
   has_many :ratings, dependent: :destroy
   validates :first_name, :last_name, :contact, :address, presence: true
   validates :first_name, :last_name, format: { with: /\A[a-zA-Z]+\z/, message: "only allows letters" }
-  validates :contact, format: { with: /\A\d{10}\z/, message: "should be 10 digits" }
+  validates :contact, format: { with: /\A\d{10}\z/, message: "should be 10 digits" },unique: true
   validates :address, format: { with: /\A[\w\s]+\z/, message: "only allows letters, digits, and spaces" }
   before_save :normalize_name
   validate :unique_name

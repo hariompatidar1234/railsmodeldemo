@@ -1,8 +1,8 @@
 class Order < ApplicationRecord
   belongs_to :user
   belongs_to :book
-  has_one :rating, dependent: :destroy
-  validates :quantity, numericality: { only_integer: true }
+  has_one :rating,presence: true ,dependent: :destroy
+  validates :quantity, presence: true,numericality: { only_integer: true }
   after_save :update_book_quantity
 
   def update_book_quantity 
