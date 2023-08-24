@@ -12,6 +12,7 @@
 =begin
 
 admin=Admin.create(first_name:"hariom",last_name:"patidar",gmail:"hariom@123gmail.com")
+
 User.create(
   first_name: "Aryan",
   last_name: "Singh",
